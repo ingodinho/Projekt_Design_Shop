@@ -1,12 +1,6 @@
 
-/*
-Font: Karla
-Farbe: #323A45 / #848484  */
-
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;600;700;800&display=swap');
 
-
-/* font-family: 'Karla', sans-serif; */
 
 /* ==========================================================================
                             GENERAL STYLING
@@ -101,11 +95,11 @@ header h1:hover {
     transition: all 0.25s;
 }
 
-.nav_mobile {
+.nav_mobile_button {
     display: none;
 }
 
-.nav_mobile span {
+.nav_mobile_button span {
     display: block;
     margin-bottom: 2.5px;
     height: 5px;
@@ -116,7 +110,6 @@ header h1:hover {
 /* ==========================================================================
                             GRID/SECTION STYLING
 ==========================================================================*/
-
 
 .grid {
     display: grid;
@@ -152,7 +145,6 @@ header h1:hover {
     margin-bottom: 0.25em;
 }
 
-
 /* ==========================================================================
                             FOOTER STYLING
 ==========================================================================*/
@@ -160,7 +152,6 @@ footer {
     padding-bottom: 5vh;
     line-height: 1.5;
 }
-
 
 .grid_footer {
     display: grid;
@@ -190,22 +181,24 @@ footer {
     text-decoration: none;
 }
 
+.grid_footer article a:hover {
+    color: #848484;
+    transition: 1s all;
+}
+
 /* SPECIFIC STYLINGS */
 
 .grid_footer article:nth-of-type(1) p {
     width: 65%;
 }
 
-.grid_footer article:nth-of-type(1) p span {
+.grid_footer article:nth-of-type(1) p span,
+.grid_footer article:nth-of-type(3) a span {
     font-weight: 700;
 }
 
 .grid_footer article:nth-of-type(3) a {
     font-weight: 400;
-}
-
-.grid_footer article:nth-of-type(3) a span {
-    font-weight: 700;
 }
 
 .grid_footer article:nth-of-type(3) p {
@@ -220,11 +213,9 @@ footer {
     list-style: none;
 }
 
-
 footer > p {
     color: #848484;
 }
-
 
 
 /* ==========================================================================
@@ -239,12 +230,43 @@ footer > p {
 
 /* ===============================NAVBAR=============================== */
 
-header ul {
-    display: none;
+header {
+    position: relative;
 }
 
 .nav_mobile {
+    display: flex;
+    color: #fff;
+    position: absolute;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
+    top: 10vh;
+    height: 80%;
+    padding: 10px;
+    right: 0;
+    background-color: #848484;
+    transition: 1s all;
+    z-index: 1;
+}
+
+.hidden_mobile {
+    display: none;
+    position: absolute;
+    height: 0;
+    right: 0;
+}
+
+.nav_mobile_button {
     display: block;
+}
+
+.nav_mobile_button:hover > span {
+    background-color: #848484;
+}
+
+.nav_mobile_button:active > span {
+    background-color: #848484;
 }
 
 /* ===============================GRID SECTIONS========================= */
