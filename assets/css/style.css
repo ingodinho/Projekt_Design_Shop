@@ -24,6 +24,262 @@ html {
 
 body {
     font-family: 'Karla', sans-serif;
+    color: #323A45;
+}
+
+.max_wrapper {
+    width: 80%;
+    margin: 0 auto;
 }
 
 
+/* ==========================================================================
+                            FONTS STYLING
+==========================================================================*/
+
+/* HEADER */
+
+header a h1 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+header a {
+    color: inherit;
+    text-decoration: none;
+}
+
+header nav ul li a {
+    font-size: 1.6rem;
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* MAIN */
+
+main article h2,
+main p,
+main h3  {
+    font-size: 1.4rem;
+}
+
+main p {
+    color: #848484;
+}
+
+
+/* footer */
+
+.grid_footer article h4,
+.grid_footer article a,
+footer p {
+    font-size: 1.2rem;
+}
+
+
+/* ==========================================================================
+                            HEADER STYLING
+==========================================================================*/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10vh 0;
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+    gap: 5vw;
+}
+
+header ul li a:hover,
+header h1:hover {
+    color: #848484;
+    transition: all 0.25s;
+}
+
+.nav_mobile {
+    display: none;
+}
+
+.nav_mobile span {
+    display: block;
+    margin-bottom: 2.5px;
+    height: 5px;
+    width: 25px;
+    background-color: #323A45;
+}
+
+/* ==========================================================================
+                            GRID/SECTION STYLING
+==========================================================================*/
+
+
+.grid {
+    display: grid;
+    grid-template: 1.25fr 1fr 1fr / repeat(3,1fr);
+    gap: 3rem;
+    align-items: center;
+}
+
+.grid_short {
+    grid-template: 1.25fr 1fr / repeat(3,1fr);
+}
+
+.grid_hero {
+    grid-column: 1 / 4;
+}
+
+.product_img a img {
+    width: 100%;
+}
+
+.product_img a img:hover {
+    opacity: 0.6;
+    transition: all 0.5s;
+}
+
+.flex_text {
+    display: flex;
+    justify-content: space-between;
+    padding: 2vh 0;
+}
+
+.flex_text div h2 {
+    margin-bottom: 0.25em;
+}
+
+
+/* ==========================================================================
+                            FOOTER STYLING
+==========================================================================*/
+footer {
+    padding-bottom: 5vh;
+    line-height: 1.5;
+}
+
+
+.grid_footer {
+    display: grid;
+    grid-template: 1fr / repeat(6, 1fr);
+    gap: 2.5rem;
+    padding: 5vh 0;
+}
+
+.grid_footer article:nth-of-type(1) {
+    grid-column: 1 / 3;
+}
+
+.grid_footer article:nth-of-type(4) {
+    grid-column: 5 / 7;
+}
+
+/* GENERAL STYLINGS ARTICLE */
+
+.grid_footer article h4 {
+    margin-bottom: 5vh;
+}
+
+.grid_footer article a {
+    display: block;
+    color: inherit;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* SPECIFIC STYLINGS */
+
+.grid_footer article:nth-of-type(1) p {
+    width: 65%;
+}
+
+.grid_footer article:nth-of-type(1) p span {
+    font-weight: 700;
+}
+
+.grid_footer article:nth-of-type(3) a {
+    font-weight: 400;
+}
+
+.grid_footer article:nth-of-type(3) a span {
+    font-weight: 700;
+}
+
+.grid_footer article:nth-of-type(3) p {
+    font-style: italic;
+}
+
+.grid_footer article:nth-of-type(4) {
+    justify-self: center;
+}
+
+.grid_footer article:nth-of-type(4) ul {
+    list-style: none;
+}
+
+
+footer > p {
+    color: #848484;
+}
+
+
+
+/* ==========================================================================
+                            MEDIA QUERIES
+==========================================================================*/
+
+@media only screen and (max-width: 576px) {
+
+.max_wrapper {
+    width: 90%;
+}
+
+/* ===============================NAVBAR=============================== */
+
+header ul {
+    display: none;
+}
+
+.nav_mobile {
+    display: block;
+}
+
+/* ===============================GRID SECTIONS========================= */
+
+
+.grid {
+    grid-template: 0.5fr repeat(6, 1fr) / 1fr;
+}
+
+.grid_short {
+    grid-template: 0.5fr repeat(3, 1fr) / 1fr;
+}
+
+.grid_hero {
+    grid-column: 1/2;
+}
+
+/* ===============================FOOTER=============================== */
+
+
+.grid_footer {
+    grid-template: repeat(4,1fr) / 1fr;
+    gap: 1rem;
+}
+
+.grid_footer article:nth-of-type(1) {
+    grid-column: 1 / 2;
+}
+
+.grid_footer article:nth-of-type(4) {
+    grid-column: 1 / 2;
+}
+
+.grid_footer article:nth-of-type(4) {
+    justify-self: start;
+}
+
+}
