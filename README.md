@@ -6,7 +6,7 @@ Die zentrale Problemstellung bei diesem Projekt ist das richtige Verwenden von C
 
 Des Weiteren wurden noch Media-Queries für die Ausrichtung auf Mobilgeräte verlangt.
 
-Zu finden ist die Seite unter:
+Zu finden ist die Seite unter: https://ingodinho.github.io/Projekt_Design_Shop/
 
 Viele Grüße
 Ingo Siemens
